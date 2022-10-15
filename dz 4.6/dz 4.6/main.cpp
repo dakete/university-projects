@@ -38,13 +38,15 @@ int rimc(char a)
 
 int index(char a)
 {
+    int ind = 0;
     for (int i = 0; i < str.length(); i++)
     {
         if (a == str[i])
         {
-            return i;
+            ind = i;
         }
     }
+    return ind;
 }
 
 
@@ -70,7 +72,7 @@ int main()
             }
              //проверка на повторение меньшей цифры перед большей более одного раза
             int valuetekuch = (x[i]), colvo = 0, j = i + 1;
-            while (rimc(x[j]) <= valuetekuch && j < x.length())
+            while (rimc(x[j]) >= valuetekuch && j < x.length())
             {
                 j++;
                 colvo++;

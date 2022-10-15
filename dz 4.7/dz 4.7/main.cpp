@@ -10,7 +10,7 @@ int main()
     cin >> c;
     cout << "Введите i: ";
     cin >> i;
-    int* arr = new int[int(i) + 1];
+    int* bar = new int[int(i) + 1];
     cout << "Какое число вам нужно ввести?" << endl;
     cout << "1. Положительное маленькое" << endl;
     cout << "2. Положительное большое" << endl;
@@ -22,43 +22,43 @@ int main()
     switch (x)
     {
     case 1:
-        srand(time(NULL)); /* данная строка создает базу генерируемых чисел, srand позволяет генерировать, time время с запуска проги, NULL обновляет каждое время число */
+        srand(time(NULL));
         s0 = rand() % 2;
-        arr[0] = s0;
+        bar[0] = s0;
         for (int j = 0; j < i; j++)
         {
-            arr[j + 1] = int((m * arr[j] + j)) % int(c);
-            cout << j << " элемент = " << arr[j + 1] << endl;
+            bar[j + 1] = int((m * bar[j] + j)) % int(c);
+            cout << j << " элемент = " << bar[j + 1] << endl;
         }
         break;
     case 2:
         srand(time(NULL));
         s0 = rand() % 100000000000 + 1;
-        arr[0] = s0;
+        bar[0] = s0;
         for (int j = 0; j < i; j++)
         {
-            arr[j + 1] = int((m * arr[j] + j)) % int(c);
-            cout << j << " элемент = " << arr[j + 1] << endl;
+            bar[j + 1] = int((m * bar[j] + j)) % int(c);
+            cout << j << " элемент = " << bar[j + 1] << endl;
         }
         break;
     case 3:
         srand(time(NULL));
         s0 = -(rand() % 2);
-        arr[0] = s0;
+        bar[0] = s0;
         for (int j = 0; j < i; j++)
         {
-            arr[j + 1] = int((m * arr[j] + j)) % int(c);
-            cout << j << " элемент = " << arr[j + 1] << endl;
+            bar[j + 1] = int((m * bar[j] + j)) % int(c);
+            cout << j << " элемент = " << bar[j + 1] << endl;
         }
         break;
     case 4:
         srand(time(NULL));
         s0 = -(rand() % 100000000000 + 1);
-        arr[0] = s0;
+        bar[0] = s0;
         for (int j = 0; j < i; j++)
         {
-            arr[j + 1] = int((m * arr[j] + j)) % int(c);
-            cout << j << " элемент = " << arr[j + 1] << endl;
+            bar[j + 1] = int((m * bar[j] + j)) % int(c);
+            cout << j << " элемент = " << bar[j + 1] << endl;
         }
         break;
     }
