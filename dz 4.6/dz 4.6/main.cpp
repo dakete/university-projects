@@ -97,7 +97,7 @@ int main()
 
         }
 
-        int var, minvychit = 1000000, indexmin = 0;
+        int var, minvychit = 10000, indexmin = 0;
         int i = 0, num = 0;
 
         while (i < x.length())
@@ -140,4 +140,3 @@ int main()
     }
 return 0;
 }
-
