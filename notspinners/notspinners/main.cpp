@@ -15,7 +15,7 @@ int main()
         {
             kl += i;
         }
-        cout << "Всего вариантов1: " << kl * kl << endl;
+        cout << "Всего вариантов: " << kl * kl << endl;
     }
     else
     {
