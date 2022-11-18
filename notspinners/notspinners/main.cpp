@@ -3,7 +3,7 @@
 using namespace std;
 int main()
 {
-    int N, M, kl = 0, kl1 = 0;
+    long N, M, kl = 0, kl1 = 0;
     cout << "Введите размер >> " << endl;
     cout << "Ширина: ";
     cin >> N;
