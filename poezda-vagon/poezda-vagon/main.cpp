@@ -3,7 +3,7 @@
 using namespace std;
 int main()
 {
-    int Vagon[3][18], MaxKupe = 0;
+    int Vagon[3][18];
     Vagon[0][0] = 1;
     Vagon[1][0] = 2;
     Vagon[2][0] = 53;
@@ -28,6 +28,7 @@ int main()
                     {
                         
                         Vagon[i][j] = Vagon[i][j - 2] - 2;
+    
                     }
                     else
                     {
@@ -37,19 +38,19 @@ int main()
             }
         }
     }
-    int N, num, r = 0;
+    int n, num, k = 0;
     cout << "Введите количество свободных мест >> ";
-    cin >> N;
+    cin >> n;
     vector<int> vec;
     cout << "Введите свободные места: " << endl;
-    while (r < N)
+    while (k < n)
     {
         cin >> num;
         vec.push_back(num);
-        r++;
+        k++;
     }
     sort(vec.begin(), vec.end());
-    int f = 0;
+    int l = 0;
     int Kolvo = 0;
     string MaxKolvo = "";
     for (int k = 0; k < 9; k++)
@@ -57,7 +58,7 @@ int main()
         Kolvo = 0;
         for (int i = 0; i < 3; i++)
         {
-            for (int j = f; j < 2 + f; j++)
+            for (int j = l; j < 2 + l; j++)
             {
                 if (find(vec.begin(), vec.end(), Vagon[i][j]) != vec.end())
                 {
@@ -65,7 +66,7 @@ int main()
                 }
             }
         }
-        f += 2;
+        l += 2;
         MaxKolvo.append(to_string(Kolvo));
     }
     int Kol = 0, max = -1;
